@@ -36,7 +36,7 @@ RUN apt-get install -y nodejs
 RUN npm install -g yo bower grunt-cli
 
 # install JHipster
-RUN npm install -g generator-jhipster@3.20.0
+RUN npm install -g generator-jhipster@2.20.0
 
 # configure the "jhipster" and "root" users
 RUN echo 'root:jhipster' |chpasswd
