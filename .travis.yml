@@ -5,6 +5,7 @@ before_script:
   - docker pull pascalgrimaud/tomcat
 script:
   - docker version
+  - docker info
   - docker ps -a
   - docker run -d -p 8080:8080 pascalgrimaud/tomcat ; sleep 120
   # - docker logs jhipster
