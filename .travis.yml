@@ -1,10 +1,11 @@
 sudo: required
+group: edge
 services:
   - docker
 before_script:
   - docker build -t jdubois/jhipster-docker .
 script:
-  - sudo service docker restart ; sleep 10
+  # - sudo service docker restart ; sleep 10
   - sudo iptables -L
   - docker version
   - docker info
