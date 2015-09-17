@@ -8,7 +8,8 @@ script:
   - docker version
   - docker info
   - sudo iptables -L
-  - docker run -d -p 8080:8080 ubuntu
+  - docker run -d -p 8080:8080 --name=ubuntuBeforeRestart ubuntu
   - sudo service docker restart ; sleep 10
   - sudo iptables -L
-  - docker run -d -p 8080:8080 ubuntu
+  - docker run -d -p 8080:8080 --name=ubuntuAfterRestart ubuntu
+  - docker ps -a
