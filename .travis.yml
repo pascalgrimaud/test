@@ -8,8 +8,9 @@ script:
   - docker info
   - docker ps -a
   - sudo iptables --list
-  - docker run -d -p 8080:8080 pascalgrimaud/tomcat ; sleep 10
   - sudo service docker restart ; sleep 10
+  - sudo iptables --list
+  - docker run -d -p 8080:8080 pascalgrimaud/tomcat ; sleep 10
   - docker run -d -p 127.0.0.1:8081:8080 pascalgrimaud/tomcat ; sleep 10
   - docker run -d -p 0.0.0.0:8082:8080 pascalgrimaud/tomcat ; sleep 10
   - docker run -d pascalgrimaud/tomcat ; sleep 10
