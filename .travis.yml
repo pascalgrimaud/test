@@ -2,21 +2,12 @@ sudo: required
 services:
   - docker
 before_script:
-  - sudo iptables -L
-  - sudo service docker restart ; sleep 10
-  - sudo iptables -L
-  - docker pull pascalgrimaud/tomcat
+  - docker build -t jdubois/jhipster-docker .
 script:
-  - sudo iptables -L
-  - service docker restart ; sleep 10
+  - sudo service docker restart ; sleep 10
   - sudo iptables -L
   - docker version
   - docker info
-  # - sudo iptables --list
-  # - docker run -d -p 8080:8080 pascalgrimaud/tomcat ; sleep 10
-  # - docker run -d -p 127.0.0.1:8081:8080 pascalgrimaud/tomcat ; sleep 10
-  # - docker run -d -p 0.0.0.0:8082:8080 pascalgrimaud/tomcat ; sleep 10
-  # - docker run -d pascalgrimaud/tomcat ; sleep 10
-  # - docker ps -a
-  # - docker logs jhipster
-  # - curl --retry 10 --retry-delay 5 -I http://localhost:8080/ | grep "HTTP/1.1 200 OK"
+  - docker run -d -p 8080:8080 -p 3000:3000 -p 3001:3001 -p 4022:22 -w /home/jhipster/jhipster-sample-app/ --name=jhipster jdubois/jhipster-docker mvn spring-boot:run ; sleep 120
+  - docker logs jhipster
+  - curl --retry 10 --retry-delay 5 -I http://localhost:8080/ | grep "HTTP/1.1 200 OK"
