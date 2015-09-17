@@ -3,10 +3,12 @@ group: edge
 services:
   - docker
 before_script:
-  - docker pull tomcat
+  - docker pull ubuntu
 script:
-  # - sudo service docker restart ; sleep 10
-  - sudo iptables -L
   - docker version
   - docker info
-  - docker run -d -p 8080:8080 tomcat
+  - sudo iptables -L
+  - docker run -d -p 8080:8080 ubuntu
+  - sudo service docker restart ; sleep 10
+  - sudo iptables -L
+  - docker run -d -p 8080:8080 ubuntu
