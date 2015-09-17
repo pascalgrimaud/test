@@ -2,14 +2,14 @@ sudo: required
 services:
   - docker
 before_script:
-  - iptables -L
-  - service docker restart ; sleep 10
-  - iptables -L
+  - sudo iptables -L
+  - sudo service docker restart ; sleep 10
+  - sudo iptables -L
   - docker pull pascalgrimaud/tomcat
 script:
-  - iptables -L
+  - sudo iptables -L
   - service docker restart ; sleep 10
-  - iptables -L
+  - sudo iptables -L
   - docker version
   - docker info
   # - sudo iptables --list
