@@ -8,6 +8,6 @@ script:
   - docker version
   - docker info
   - docker ps -a
-  - docker run -d -p 8080:8080 pascalgrimaud/tomcat ; sleep 10
+  - docker run -d pascalgrimaud/tomcat ; sleep 10
   # - docker logs jhipster
   # - curl --retry 10 --retry-delay 5 -I http://localhost:8080/ | grep "HTTP/1.1 200 OK"
