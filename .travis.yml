@@ -4,5 +4,7 @@ os:
 services:
   - docker
 before_install:
-  - service docker restart ; sleep 10
-  - /etc/init.d/postgresql stop
+  - sudo iptables -L
+  - service docker restart ; sleep 5
+  - sudo iptables -L
+  - sudo /etc/init.d/postgresql stop
