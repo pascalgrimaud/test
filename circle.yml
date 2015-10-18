@@ -1,13 +1,15 @@
 machine:
   services:
     - docker
+  java:
+    version: oraclejdk8
 dependencies:
   override:
     - java -version
     - git --version
-    - yo --version
     - mvn -v
     - node -v
+    - yo --version
     - npm -v
     - bower -v
     - grunt --version
