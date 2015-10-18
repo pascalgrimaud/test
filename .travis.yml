@@ -1,8 +1,14 @@
 os:
   - linux
-sudo: required
 services:
   - docker
 before_install:
   - sudo service docker restart ; sleep 10
+sudo: required
+services:
+  - docker
+before_install:
+  - sudo iptables -L
+  - service docker restart ; sleep 5
+  - sudo iptables -L
   - sudo /etc/init.d/postgresql stop
