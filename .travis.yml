@@ -19,7 +19,7 @@ install:
   - git clone https://github.com/pascalgrimaud/generator-jhipster.git
   - cd $TRAVIS_BUILD_DIR/generator-jhipster
   - npm install -g
-  - npm test
+  - npm link
 script:
   - cd $TRAVIS_BUILD_DIR/app-mysql/
   - yo jhipster --force --no-insight
