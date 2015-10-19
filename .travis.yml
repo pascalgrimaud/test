@@ -19,3 +19,10 @@ install:
   - git clone https://github.com/pascalgrimaud/generator-jhipster.git
   - cd $TRAVIS_BUILD_DIR/generator-jhipster
   - npm install -g
+  -
+script:
+  - cd $TRAVIS_BUILD_DIR/app-mysql/
+  - yo jhipster --force --no-insight
+  - ls -al $TRAVIS_BUILD_DIR/app-mysql/
+  - ls -al $TRAVIS_BUILD_DIR/app-mysql/node_modules/generator-jhipster/
+  - ls -al $TRAVIS_BUILD_DIR/app-mysql/node_modules/generator-jhipster/entity/
