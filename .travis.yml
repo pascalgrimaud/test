@@ -8,3 +8,14 @@ before_install:
   - service docker restart ; sleep 5
   - sudo iptables -L
   - sudo /etc/init.d/postgresql stop
+install:
+  - npm install -g yo
+  - npm install -g bower
+  - npm install -g grunt-cli
+  - npm install -g gulp
+  #--------------------------------------------------
+  # use a snapshot version of jhipster
+  #--------------------------------------------------
+  - git clone https://github.com/pascalgrimaud/generator-jhipster.git
+  - cd $TRAVIS_BUILD_DIR/generator-jhipster
+  - npm install -g
