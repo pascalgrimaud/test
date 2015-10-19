@@ -25,4 +25,8 @@ script:
   - yo jhipster --force --no-insight
   - ls -al $TRAVIS_BUILD_DIR/app-mysql/
   - ls -al $TRAVIS_BUILD_DIR/app-mysql/node_modules/generator-jhipster/
-  - ls -al $TRAVIS_BUILD_DIR/app-mysql/node_modules/generator-jhipster/entity/
+  - ls -al $TRAVIS_BUILD_DIR/app-mysql/node_modules/generator-jhipster/entity
+  - npm link generator-jhipster
+  - ls -al $TRAVIS_BUILD_DIR/app-mysql/
+  - ls -al $TRAVIS_BUILD_DIR/app-mysql/node_modules/generator-jhipster/
+  - ls -al $TRAVIS_BUILD_DIR/app-mysql/node_modules/generator-jhipster/entity
