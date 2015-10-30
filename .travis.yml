@@ -5,11 +5,11 @@ services:
 sudo: required
 before_install:
   - sudo iptables -L
-  - service docker restart ; sleep 5
-  - sudo iptables -L
 install:
-  - echo $TRAVIS_BUILD_DIR
-  - pwd
-  - docker ps -a
+  - npm install -g yo
+  - cd $TRAVIS_BUILD_DIR/
+  - git clone https://github.com/jhipster/generator-jhipster.git
+  - cd $TRAVIS_BUILD_DIR/generator-jhipster
+  - npm install -g
 script:
   - echo hello
