@@ -7,10 +7,11 @@ before_install:
   - sudo iptables -L
 install:
   - npm install -g yo
+  - npm install -g generator-jhipster
   - cd $TRAVIS_BUILD_DIR/
   - git clone https://github.com/jhipster/generator-jhipster.git
   - cd $TRAVIS_BUILD_DIR/generator-jhipster
-  - npm install -g
+  - npm link
   - npm test
 script:
   - echo hello
