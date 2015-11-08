@@ -9,16 +9,7 @@ node_js:
 before_install:
   - sudo iptables -L
 install:
-  - npm install -g yo
-#  - npm install -g generator-jhipster
-  - cd $TRAVIS_BUILD_DIR/
-  - git clone https://github.com/jhipster/generator-jhipster.git
-  - cd $TRAVIS_BUILD_DIR/generator-jhipster
-  - npm install
-  - npm link
-  - npm test
+  - docker version
 script:
   - echo hello
-  - cd $TRAVIS_BUILD_DIR
-  - mkdir test && cd test
-  - yo jhipster
+  - echo $TRAVIS_BUILD_DIR -> $DOCKER_LOGIN $DOCKER_PASSWORD
