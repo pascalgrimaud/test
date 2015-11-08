@@ -12,4 +12,4 @@ install:
   - docker version
 script:
   - echo hello
-  - echo $TRAVIS_BUILD_DIR -> $DOCKER_LOGIN $DOCKER_PASSWORD
+  - echo "$TRAVIS_BUILD_DIR -> $DOCKER_LOGIN $DOCKER_PASSWORD"
