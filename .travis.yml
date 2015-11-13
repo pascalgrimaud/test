@@ -2,15 +2,10 @@ os:
   - linux
 services:
   - docker
-sudo: required
-language: node_js
-node_js:
-  - "4.2.1"
-before_install:
-  - sudo iptables -L
+language: java
+jdk:
+  - oraclejdk8
 install:
-  - docker version
+  - docker pull hello-jhipster:master
 script:
-  - echo hello
-  - echo $TRAVIS_BUILD_DIR
-  - echo $DOCKER_LOGIN $DOCKER_PASSWORD
+  - docker images
