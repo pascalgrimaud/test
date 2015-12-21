@@ -12,8 +12,8 @@ install:
   - cat cql/create-tables.cql >> cql/create-keyspace-prod.cql
   - cat cql/create-keyspace-prod.cql
   - docker cp cql/create-keyspace-prod.cql app-cassandra:create-keyspace-prod.cql
-  - docker exec -it app-cassandra ls -l / /cql/
-  - docker exec -it app-cassandra cqlsh -f /cql/create-keyspace-prod.cql
+  - docker exec -it app-cassandra ls -l /
+  - docker exec -it app-cassandra cqlsh -f /create-keyspace-prod.cql
   - sleep 20
   - docker logs app-cassandra
 script:
