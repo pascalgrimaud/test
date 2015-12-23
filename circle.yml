@@ -11,6 +11,7 @@ dependencies:
     - java -version
     - node -v
     - npm -v
+    - bower -v
 test:
   override:
     - echo "hello"
