@@ -3,21 +3,10 @@ machine:
     - docker
   java:
     version: oraclejdk8
-  node:
-    version: 4.1.0
 dependencies:
   override:
-    - java -version
-    - git --version
-    - mvn -v
-    - node -v
-    - npm -v
-    # - yo --version
-    - bower -v
-    - grunt --version
-    - gulp -v
     - docker version
-    - docker-compose version
+    - java -version
 test:
   override:
     - echo "hello"
