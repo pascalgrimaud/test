@@ -3,10 +3,14 @@ machine:
     - docker
   java:
     version: oraclejdk8
+  node:
+    version: 4.2.1
 dependencies:
   override:
     - docker version
     - java -version
+    - node -v
+    - npm -v
 test:
   override:
     - echo "hello"
