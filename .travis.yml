@@ -29,6 +29,7 @@ before_install:
   - nvm install $NODE_VERSION
   - nvm use $NODE_VERSION
 install:
+  - echo $(npm config get prefix)
   - npm install -g yo
   - npm install -g bower
   - npm install -g grunt-cli
