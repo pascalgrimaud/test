@@ -38,11 +38,18 @@ before_install:
   - nvm install $NODE_VERSION
   - nvm use $NODE_VERSION
 install:
-  - echo $(npm config get prefix)
+  - echo "before"
+  - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/
   - if [ -d $HOME/cache/node_modules/global/yo/ ]; then mv $HOME/cache/node_modules/global/yo $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
   - if [ -d $HOME/cache/node_modules/global/bower/ ]; then mv $HOME/cache/node_modules/global/bower $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
   - if [ -d $HOME/cache/node_modules/global/grunt-cli/ ]; then mv $HOME/cache/node_modules/global/grunt-cli $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
   - if [ -d $HOME/cache/node_modules/global/gulp/ ]; then mv $HOME/cache/node_modules/global/gulp $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
+  - echo "after"
+  - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/
+  - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/yo
+  - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/bower
+  - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/grunt-cli
+  - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp
   - npm install -g yo
   - npm install -g bower
   - npm install -g grunt-cli
