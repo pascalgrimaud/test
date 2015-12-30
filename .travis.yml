@@ -1,0 +1,37 @@
+os:
+  - linux
+sudo: false
+language: java
+jdk:
+  - oraclejdk8
+cache:
+  directories:
+    # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/npm/
+    - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/yo/
+    - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/grunt-cli/
+    - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp/
+    - node_modules
+env:
+  global:
+  - NODE_VERSION=4.2.1
+  - CXX=g++-4.8
+  matrix:
+  - PROFILE=dev  JHIPSTER=app-gradle    RUNTASK=0
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+before_install:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - nvm install $NODE_VERSION
+  - nvm use $NODE_VERSION
+install:
+  - npm install -g yo
+  - npm install -g bower
+  - npm install -g grunt-cli
+  - npm install -g gulp
+script:
+  - echo "script"
