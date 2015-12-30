@@ -4,12 +4,20 @@ sudo: false
 language: java
 jdk:
   - oraclejdk8
+before_cache:
+  - rm -Rf $HOME/cache/node_modules/global/
+  - mkdir $HOME/cache/node_modules/global/
+  - mv $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/yo/ $HOME/cache/node_modules/global/
+  - mv $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/bower/ $HOME/cache/node_modules/global/
+  - mv $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/grunt-cli/ $HOME/cache/node_modules/global/
+  - mv $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp/ $HOME/cache/node_modules/global/
 cache:
   directories:
     # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/npm/
     # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/yo/
     # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/grunt-cli/
     # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp/
+    - $HOME/cache/node_modules/global/
     - node_modules
 env:
   global:
@@ -30,6 +38,10 @@ before_install:
   - nvm use $NODE_VERSION
 install:
   - echo $(npm config get prefix)
+  - if [ -d $HOME/cache/node_modules/global/yo/ ]; then mv $HOME/cache/node_modules/global/yo $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
+  - if [ -d $HOME/cache/node_modules/global/bower/ ]; then mv $HOME/cache/node_modules/global/bower $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
+  - if [ -d $HOME/cache/node_modules/global/grunt-cli/ ]; then mv $HOME/cache/node_modules/global/grunt-cli $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
+  - if [ -d $HOME/cache/node_modules/global/gulp/ ]; then mv $HOME/cache/node_modules/global/gulp $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
   - npm install -g yo
   - npm install -g bower
   - npm install -g grunt-cli
