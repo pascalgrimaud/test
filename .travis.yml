@@ -7,9 +7,9 @@ jdk:
 cache:
   directories:
     # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/npm/
-    - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/yo/
-    - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/grunt-cli/
-    - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp/
+    # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/yo/
+    # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/grunt-cli/
+    # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp/
     - node_modules
 env:
   global:
