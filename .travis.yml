@@ -14,10 +14,10 @@ before_cache:
   - mv $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp/ $HOME/cache/node_modules/global/
 cache:
   directories:
-    # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/npm/
-    # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/yo/
-    # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/grunt-cli/
-    # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp/
+    - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/npm/
+    - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/yo/
+    - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/grunt-cli/
+    - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp/
     - $HOME/cache/node_modules/global/
     - node_modules
 env:
@@ -38,6 +38,7 @@ before_install:
   - nvm install $NODE_VERSION
   - nvm use $NODE_VERSION
 install:
+  - ln -s /usr/lib/node_modules/npm/bin/npm-cli.js /usr/bin/npm
   - echo "before"
   - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/
   - if [ -d $HOME/cache/node_modules/global/yo/ ]; then mv $HOME/cache/node_modules/global/yo $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
