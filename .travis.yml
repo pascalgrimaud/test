@@ -40,4 +40,8 @@ script:
   - grunt --version
   - gulp -v
   - ls -al /home/travis/.nvm/
-  - ls -al /home/travis/.nvm/v4.2.1/
+  - ls -al /home/travis/.nvm/versions/
+  - ls -al /home/travis/.nvm/versions/node/
+  - ls -al /home/travis/.nvm/versions/node/v4.2.1/
+  - ls -al /home/travis/.nvm/versions/node/v4.2.1/lib/
+  - ls -al /home/travis/.nvm/versions/node/v4.2.1/lib/node_modules/
