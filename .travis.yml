@@ -46,3 +46,4 @@ script:
   - ls -al /home/travis/.nvm/versions/node/v4.2.1/
   - ls -al /home/travis/.nvm/versions/node/v4.2.1/lib/
   - ls -al /home/travis/.nvm/versions/node/v4.2.1/lib/node_modules/
+  - echo "yo"
