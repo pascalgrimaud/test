@@ -5,21 +5,11 @@ sudo: false
 language: java
 jdk:
   - oraclejdk8
-before_cache:
-  - rm -Rf $HOME/cache/node_modules/global/
-  - mkdir $HOME/cache/node_modules/global/
-  - mv $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/yo/ $HOME/cache/node_modules/global/
-  - mv $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/bower/ $HOME/cache/node_modules/global/
-  - mv $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/grunt-cli/ $HOME/cache/node_modules/global/
-  - mv $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp/ $HOME/cache/node_modules/global/
 cache:
   directories:
-    # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/npm/
-    - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/yo/
-    - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/grunt-cli/
-    - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp/
-    - $HOME/cache/node_modules/global/
-    - node_modules
+    # Replace "grunt-cli" with whatever global binary you're using
+    - $(npm config get prefix)/bin/grunt-cli
+    - $(npm config get prefix)/bin/gulp
 env:
   global:
   - NODE_VERSION=4.2.1
@@ -38,23 +28,8 @@ before_install:
   - nvm install $NODE_VERSION
   - nvm use $NODE_VERSION
 install:
-  # - ln -s /usr/lib/node_modules/npm/bin/npm-cli.js /usr/bin/npm
-  # - echo "before"
-  # - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/
-  # - if [ -d $HOME/cache/node_modules/global/yo/ ]; then mv $HOME/cache/node_modules/global/yo $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
-  # - if [ -d $HOME/cache/node_modules/global/bower/ ]; then mv $HOME/cache/node_modules/global/bower $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
-  # - if [ -d $HOME/cache/node_modules/global/grunt-cli/ ]; then mv $HOME/cache/node_modules/global/grunt-cli $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
-  # - if [ -d $HOME/cache/node_modules/global/gulp/ ]; then mv $HOME/cache/node_modules/global/gulp $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
-  # - echo "after"
-  - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/
-  - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/npm
-  # - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/yo
-  # - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/bower
-  # - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/grunt-cli
-  # - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp
-  # - npm install -g yo
-  # - npm install -g bower
-  # - npm install -g grunt-cli
-  # - npm install -g gulp
+  - npm install -g grunt-cli
+  - npm install -g gulp
 script:
-  - echo "script"
+  - grunt --version
+  - gulp -v
