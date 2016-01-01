@@ -39,3 +39,5 @@ script:
   - bower -v
   - grunt --version
   - gulp -v
+  - ls -al /home/travis/.nvm/
+  - ls -al /home/travis/.nvm/v4.2.1/
