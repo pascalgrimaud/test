@@ -35,5 +35,7 @@ install:
   - npm install -g grunt-cli
   - npm install -g gulp
 script:
+  - yo --version
+  - bower -v
   - grunt --version
   - gulp -v
