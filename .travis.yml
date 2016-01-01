@@ -8,10 +8,11 @@ jdk:
 cache:
   directories:
     # Replace "grunt-cli" with whatever global binary you're using
-    - $(npm config get prefix)/bin/yo
-    - $(npm config get prefix)/bin/bower
-    - $(npm config get prefix)/bin/grunt-cli
-    - $(npm config get prefix)/bin/gulp
+    # - $(npm config get prefix)/bin/yo
+    # - $(npm config get prefix)/bin/bower
+    # - $(npm config get prefix)/bin/grunt-cli
+    # - $(npm config get prefix)/bin/gulp
+    - /home/travis/.nvm/versions/
 env:
   global:
   - NODE_VERSION=4.2.1
