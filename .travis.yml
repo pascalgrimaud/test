@@ -8,6 +8,8 @@ jdk:
 cache:
   directories:
     # Replace "grunt-cli" with whatever global binary you're using
+    - $(npm config get prefix)/bin/yo
+    - $(npm config get prefix)/bin/bower
     - $(npm config get prefix)/bin/grunt-cli
     - $(npm config get prefix)/bin/gulp
 env:
@@ -28,6 +30,8 @@ before_install:
   - nvm install $NODE_VERSION
   - nvm use $NODE_VERSION
 install:
+  - npm install -g yo
+  - npm install -g bower
   - npm install -g grunt-cli
   - npm install -g gulp
 script:
