@@ -14,7 +14,7 @@ before_cache:
   - mv $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp/ $HOME/cache/node_modules/global/
 cache:
   directories:
-    - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/npm/
+    # - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/npm/
     - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/yo/
     - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/grunt-cli/
     - $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp/
@@ -38,22 +38,23 @@ before_install:
   - nvm install $NODE_VERSION
   - nvm use $NODE_VERSION
 install:
-  - ln -s /usr/lib/node_modules/npm/bin/npm-cli.js /usr/bin/npm
-  - echo "before"
+  # - ln -s /usr/lib/node_modules/npm/bin/npm-cli.js /usr/bin/npm
+  # - echo "before"
+  # - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/
+  # - if [ -d $HOME/cache/node_modules/global/yo/ ]; then mv $HOME/cache/node_modules/global/yo $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
+  # - if [ -d $HOME/cache/node_modules/global/bower/ ]; then mv $HOME/cache/node_modules/global/bower $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
+  # - if [ -d $HOME/cache/node_modules/global/grunt-cli/ ]; then mv $HOME/cache/node_modules/global/grunt-cli $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
+  # - if [ -d $HOME/cache/node_modules/global/gulp/ ]; then mv $HOME/cache/node_modules/global/gulp $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
+  # - echo "after"
   - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/
-  - if [ -d $HOME/cache/node_modules/global/yo/ ]; then mv $HOME/cache/node_modules/global/yo $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
-  - if [ -d $HOME/cache/node_modules/global/bower/ ]; then mv $HOME/cache/node_modules/global/bower $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
-  - if [ -d $HOME/cache/node_modules/global/grunt-cli/ ]; then mv $HOME/cache/node_modules/global/grunt-cli $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
-  - if [ -d $HOME/cache/node_modules/global/gulp/ ]; then mv $HOME/cache/node_modules/global/gulp $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/ ; fi
-  - echo "after"
-  - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/
-  - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/yo
-  - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/bower
-  - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/grunt-cli
-  - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp
-  - npm install -g yo
-  - npm install -g bower
-  - npm install -g grunt-cli
-  - npm install -g gulp
+  - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/npm
+  # - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/yo
+  # - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/bower
+  # - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/grunt-cli
+  # - ls -al $HOME/.nvm/versions/node/v4.2.1/lib/node_modules/gulp
+  # - npm install -g yo
+  # - npm install -g bower
+  # - npm install -g grunt-cli
+  # - npm install -g gulp
 script:
   - echo "script"
