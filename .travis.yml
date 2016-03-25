@@ -10,7 +10,7 @@ jdk:
 before_install:
   - ls -l /usr/local/
   - ls -l /usr/local/phantomjs/
-  - ls -l /usr/local/phantomjs/phantomjs
+  - ls -l /usr/local/phantomjs/phantomjs/
 install:
   - echo "hello install"
 script:
