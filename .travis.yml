@@ -21,7 +21,5 @@ install:
   - ls -l /usr/local/
   - ls -l /usr/local/phantomjs/
   - ls -l /usr/local/phantomjs-2.1.1/
- +export PATH="$PWD"/travis-phantomjs/phantomjs-2.1.1-linux-x86_64/bin:"$PATH"
-
-script:
+ script:
   - echo "hello script"
