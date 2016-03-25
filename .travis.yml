@@ -1,49 +1,17 @@
-# test 2
 os:
   - linux
-sudo: false
-language: java
+services:
+  - docker
+language: node_js
+node_js:
+  - "4.4.1"
 jdk:
   - oraclejdk8
-cache:
-  directories:
-    # Replace "grunt-cli" with whatever global binary you're using
-    # - $(npm config get prefix)/bin/yo
-    # - $(npm config get prefix)/bin/bower
-    # - $(npm config get prefix)/bin/grunt-cli
-    # - $(npm config get prefix)/bin/gulp
-    - /home/travis/.nvm/versions/
-env:
-  global:
-  - NODE_VERSION=4.2.1
-  - CXX=g++-4.8
-  matrix:
-  - PROFILE=dev  JHIPSTER=app-gradle    RUNTASK=0
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
 before_install:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - nvm install $NODE_VERSION
-  - nvm use $NODE_VERSION
+  - ls -l /usr/local/
+  - ls -l /usr/local/phantomjs/
+  - ls -l /usr/local/phantomjs/phantomjs
 install:
-  - npm install -g yo
-  - npm install -g bower
-  - npm install -g grunt-cli
-  - npm install -g gulp
+  - echo "hello install"
 script:
-  - yo --version
-  - bower -v
-  - grunt --version
-  - gulp -v
-  - ls -al /home/travis/.nvm/
-  - ls -al /home/travis/.nvm/versions/
-  - ls -al /home/travis/.nvm/versions/node/
-  - ls -al /home/travis/.nvm/versions/node/v4.2.1/
-  - ls -al /home/travis/.nvm/versions/node/v4.2.1/lib/
-  - ls -al /home/travis/.nvm/versions/node/v4.2.1/lib/node_modules/
-  - echo "yo"
+  - echo "hello script"
