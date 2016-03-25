@@ -21,5 +21,5 @@ install:
   - ls -l /usr/local/
   - ls -l /usr/local/phantomjs/
   - ls -l /usr/local/phantomjs-2.1.1/
- script:
+script:
   - echo "hello script"
