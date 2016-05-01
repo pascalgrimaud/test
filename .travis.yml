@@ -2,8 +2,14 @@ os:
   - linux
 services:
   - docker
+language: node_js
+node_js:
+  - "4.4.3"
 jdk:
   - oraclejdk8
+env:
+  global:
+    - PROTRACTOR=1
 install:
   - ls -al
 script:

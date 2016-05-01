@@ -1,8 +1,6 @@
 #!/bin/bash
 set -ev
 
-PROTRACTOR=1
-
 wlaunchProtractor() {
     retryCount=0
     maxRetry=10
