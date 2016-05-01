@@ -13,5 +13,5 @@ env:
 install:
   - ls -al
 script:
-  - sh test.sh
+  - test.sh
   - echo "hello script"
