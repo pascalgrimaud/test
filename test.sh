@@ -1,4 +1,6 @@
 #!/bin/bash
+set -ev
+echo "test"
 
 function waitForProtractor() {
     echo "Start waitForProtractor"
