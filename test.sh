@@ -25,6 +25,5 @@ launchProtractor() {
     gulp itest --no-notification
 }
 
-if [ "$PROTRACTOR" == 1 ]; then
-  launchProtractor
-fi
+
+launchProtractor
