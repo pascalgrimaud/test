@@ -4,6 +4,6 @@ jdk:
   - oraclejdk8
 install:
   - ls -al
-  - test.sh
+  - sh test.sh
 script:
   - echo "hello script"
