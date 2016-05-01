@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ev
 
-wlaunchProtractor() {
+launchProtractor() {
     retryCount=0
     maxRetry=10
     httpUrl="http://localhost:8080"
