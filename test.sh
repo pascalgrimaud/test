@@ -1,6 +1,7 @@
 #!/bin/bash
 
 function waitForProtractor() {
+    echo "Start waitForProtractor"
     retryCount=0
     maxRetry=5
     curl http://localhost:8080 &>/dev/null
@@ -20,4 +21,3 @@ function waitForProtractor() {
 }
 
 waitForProtractor
-
