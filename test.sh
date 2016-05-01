@@ -1,11 +1,9 @@
 #!/bin/bash
 
-function waitForProtractor() {
+waitForProtractor() {
     echo "waitForProtractor"
     retryCount=0
     maxRetry=5
-    echo "1st curl"
-    curl http://localhost:8080 &>/dev/null
     while [ "$retryCount" -ne "$maxRetry" ]; do
         curl http://localhost:8080 &>/dev/null && break
         echo "Application not reachable yet. Sleep and retry - retryCount =" $retryCount
