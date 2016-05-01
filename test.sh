@@ -2,7 +2,7 @@
 set -ev
 echo "test"
 
-function waitForProtractor() {
+waitForProtractor() {
     echo "Start waitForProtractor"
     retryCount=0
     maxRetry=5
