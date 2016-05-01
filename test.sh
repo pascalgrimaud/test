@@ -6,12 +6,12 @@ waitForProtractor() {
     echo "Start waitForProtractor"
     retryCount=0
     maxRetry=5
-    curl -f http://localhost:8080 &>/dev/null
+    curl --retry 10 --retry-delay 5 -I http://localhost:8080/ &>/dev/null
     while [ $? -ne 0 ] && [ "$retryCount" -ne "$maxRetry" ]; do
         echo "Application not reachable yet. Sleep and retry - retryCount =" $retryCount
         sleep 5
         ((retryCount+=1))
-        curl -f http://localhost:8080 &>/dev/null
+        curl --retry 10 --retry-delay 5 -I http://localhost:8080/ &>/dev/null
     done
 
     if [ $? -ne 0 ]; then
