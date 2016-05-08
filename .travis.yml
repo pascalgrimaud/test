@@ -21,7 +21,7 @@ script:
   - gulp -v
   - docker version
   - docker-compose version
-  - cd "$HOME"/generator-jhipster
+  - cd "$TRAVIS_BUILD_DIR"/generator-jhipster
   - npm install
   - npm link
   # - sh test.sh
