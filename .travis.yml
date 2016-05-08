@@ -4,14 +4,23 @@ services:
   - docker
 language: node_js
 node_js:
-  - "4.4.3"
+  - "4.4.4"
 jdk:
   - oraclejdk8
-env:
-  global:
-    - PROTRACTOR=1
 install:
-  - ls -al
+  - npm install -g npm yo bower gulp-cli
 script:
-  - sh test.sh
-  - echo "hello script"
+  - java -version
+  - git --version
+  - mvn -v
+  - node -v
+  - npm -v
+  - bower -v
+  - yo --version
+  - gulp -v
+  - docker version
+  - docker-compose version
+  - cd "$HOME"/generator-jhipster
+  - npm install
+  - npm link
+  # - sh test.sh

@@ -1,28 +1,19 @@
 #!/bin/bash
 
-launchProtractor() {
-    retryCount=0
+launchDockerPs() {
+    retryCount=1
     maxRetry=10
-    httpUrl="http://localhost:8080"
 
-    rep=$(curl -v "$httpUrl")
-    status=$?
-    while [ "$status" -ne 0 ] && [ "$retryCount" -ne "$maxRetry" ]; do
+    docker ps -a
+
+    while [ "$retryCount" -gt "$maxRetry" ]; do
         echo "[$(date)] Application not reachable yet. Sleep and retry - retryCount =" $retryCount "/" $maxRetry
         retryCount=$((retryCount+1))
-        sleep 10
-        rep=$(curl -v "$httpUrl")
-        status=$?
+        sleep 30
+
+        docker ps -a
     done
-
-    if [ "$status" -ne 0 ]; then
-      echo "[$(date)] Not connected after" $retryCount " retries. Abort protractor tests."
-      exit 0
-    fi
-
-    echo "[$(date)] Connected to application. Start protractor tests."
-    gulp itest --no-notification
 }
 
 
-launchProtractor
+launchDockerPs
