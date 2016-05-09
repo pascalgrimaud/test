@@ -21,7 +21,11 @@ script:
   - gulp -v
   - docker version
   - docker-compose version
-  - ls -al $TRAVIS_BUILD_DIR
-  - ls -al "$TRAVIS_BUILD_DIR"/generator-jhipster
-  - sh install.sh
-  # - sh test.sh
+  - docker build -t tester .
+  - docker images
+  - sh run.sj
+  - sh test.sh
+  - docker ps -aq
+  - docker logs app-mysql
+  - docker logs app-cassandra
+  - docker logs app-mongodb
