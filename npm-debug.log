@@ -1,0 +1,258 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'yo' ]
+2 info using npm@2.15.1
+3 info using node@v4.4.3
+4 verbose install initial load of /usr/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/lib/package.json
+6 silly cache add args [ 'yo', null ]
+7 verbose cache add spec yo
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'yo',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'yo',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed yo@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for yo
+11 info addNameTag [ 'yo', 'latest' ]
+12 silly mapToRegistry name yo
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry data Result {
+15 silly mapToRegistry   raw: 'yo',
+15 silly mapToRegistry   scope: null,
+15 silly mapToRegistry   name: 'yo',
+15 silly mapToRegistry   rawSpec: '',
+15 silly mapToRegistry   spec: 'latest',
+15 silly mapToRegistry   type: 'tag' }
+16 silly mapToRegistry uri https://registry.npmjs.org/yo
+17 verbose addNameTag registry:https://registry.npmjs.org/yo not in flight; fetching
+18 verbose request uri https://registry.npmjs.org/yo
+19 verbose request no auth needed
+20 info attempt registry request try #1 at 00:58:09
+21 verbose request id 790a6e45910b1ebf
+22 verbose etag "1631QEATEMUFUMWISD8BZNRE3"
+23 http request GET https://registry.npmjs.org/yo
+24 http 200 https://registry.npmjs.org/yo
+25 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 verbose headers   etag: '"9B361K854N4L5GN2HVXL8OHZZ"',
+25 verbose headers   'content-type': 'application/json',
+25 verbose headers   'cache-control': 'max-age=300',
+25 verbose headers   'content-length': '58835',
+25 verbose headers   'accept-ranges': 'bytes',
+25 verbose headers   date: 'Mon, 09 May 2016 22:58:09 GMT',
+25 verbose headers   via: '1.1 varnish',
+25 verbose headers   age: '0',
+25 verbose headers   connection: 'keep-alive',
+25 verbose headers   'x-served-by': 'cache-lhr6321-LHR',
+25 verbose headers   'x-cache': 'HIT',
+25 verbose headers   'x-cache-hits': '1',
+25 verbose headers   'x-timer': 'S1462834689.242848,VS0,VE364',
+25 verbose headers   vary: 'Accept-Encoding' }
+26 silly get cb [ 200,
+26 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly get     etag: '"9B361K854N4L5GN2HVXL8OHZZ"',
+26 silly get     'content-type': 'application/json',
+26 silly get     'cache-control': 'max-age=300',
+26 silly get     'content-length': '58835',
+26 silly get     'accept-ranges': 'bytes',
+26 silly get     date: 'Mon, 09 May 2016 22:58:09 GMT',
+26 silly get     via: '1.1 varnish',
+26 silly get     age: '0',
+26 silly get     connection: 'keep-alive',
+26 silly get     'x-served-by': 'cache-lhr6321-LHR',
+26 silly get     'x-cache': 'HIT',
+26 silly get     'x-cache-hits': '1',
+26 silly get     'x-timer': 'S1462834689.242848,VS0,VE364',
+26 silly get     vary: 'Accept-Encoding' } ]
+27 verbose get saving yo to /home/pgrimaud/.npm/registry.npmjs.org/yo/.cache.json
+28 verbose correctMkdir /home/pgrimaud/.npm correctMkdir not in flight; initializing
+29 silly addNameTag next cb for yo with tag latest
+30 silly addNamed yo@1.8.1
+31 verbose addNamed "1.8.1" is a plain semver version for yo
+32 silly mapToRegistry name yo
+33 silly mapToRegistry using default registry
+34 silly mapToRegistry registry https://registry.npmjs.org/
+35 silly mapToRegistry data Result {
+35 silly mapToRegistry   raw: 'yo',
+35 silly mapToRegistry   scope: null,
+35 silly mapToRegistry   name: 'yo',
+35 silly mapToRegistry   rawSpec: '',
+35 silly mapToRegistry   spec: 'latest',
+35 silly mapToRegistry   type: 'tag' }
+36 silly mapToRegistry uri https://registry.npmjs.org/yo
+37 verbose addRemoteTarball https://registry.npmjs.org/yo/-/yo-1.8.1.tgz not in flight; adding
+38 verbose addRemoteTarball [ 'https://registry.npmjs.org/yo/-/yo-1.8.1.tgz',
+38 verbose addRemoteTarball   'f215024563f5ba0fe339fe4478f5f442fff48b74' ]
+39 info retry fetch attempt 1 at 00:58:09
+40 info attempt registry request try #1 at 00:58:09
+41 http fetch GET https://registry.npmjs.org/yo/-/yo-1.8.1.tgz
+42 http fetch 200 https://registry.npmjs.org/yo/-/yo-1.8.1.tgz
+43 silly fetchAndShaCheck shasum f215024563f5ba0fe339fe4478f5f442fff48b74
+44 verbose addTmpTarball /tmp/npm-4220-878612f9/registry.npmjs.org/yo/-/yo-1.8.1.tgz not in flight; adding
+45 verbose addTmpTarball already have metadata; skipping unpack for yo@1.8.1
+46 verbose correctMkdir /home/pgrimaud/.npm correctMkdir not in flight; initializing
+47 silly cache afterAdd yo@1.8.1
+48 verbose afterAdd /home/pgrimaud/.npm/yo/1.8.1/package/package.json not in flight; writing
+49 verbose correctMkdir /home/pgrimaud/.npm correctMkdir not in flight; initializing
+50 verbose afterAdd /home/pgrimaud/.npm/yo/1.8.1/package/package.json written
+51 silly install resolved [ { name: 'yo',
+51 silly install resolved     version: '1.8.1',
+51 silly install resolved     description: 'CLI tool for running Yeoman generators',
+51 silly install resolved     homepage: 'http://yeoman.io',
+51 silly install resolved     author: { name: 'Yeoman' },
+51 silly install resolved     files: [ 'lib' ],
+51 silly install resolved     main: 'lib',
+51 silly install resolved     keywords:
+51 silly install resolved      [ 'cli-app',
+51 silly install resolved        'cli',
+51 silly install resolved        'front-end',
+51 silly install resolved        'development',
+51 silly install resolved        'dev',
+51 silly install resolved        'build',
+51 silly install resolved        'web',
+51 silly install resolved        'tool',
+51 silly install resolved        'scaffold',
+51 silly install resolved        'stack',
+51 silly install resolved        'yeoman',
+51 silly install resolved        'generator',
+51 silly install resolved        'generate',
+51 silly install resolved        'app',
+51 silly install resolved        'boilerplate' ],
+51 silly install resolved     license: 'BSD-2-Clause',
+51 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/yeoman/yo.git' },
+51 silly install resolved     bin: { yo: 'lib/cli.js', 'yo-complete': 'lib/completion/index.js' },
+51 silly install resolved     engines: { node: '>=0.12.0' },
+51 silly install resolved     scripts:
+51 silly install resolved      { test: 'gulp',
+51 silly install resolved        postinstall: 'yodoctor && npm run tabtab',
+51 silly install resolved        postupdate: 'yodoctor',
+51 silly install resolved        prepublish: 'gulp prepublish',
+51 silly install resolved        tabtab: '[ $CI ] || tabtab install --name=yo --completer=yo-complete' },
+51 silly install resolved     dependencies:
+51 silly install resolved      { async: '^1.0.0',
+51 silly install resolved        chalk: '^1.0.0',
+51 silly install resolved        'cli-list': '^0.1.1',
+51 silly install resolved        configstore: '^1.0.0',
+51 silly install resolved        'cross-spawn-async': '^2.0.0',
+51 silly install resolved        figures: '^1.3.5',
+51 silly install resolved        fullname: '^2.0.0',
+51 silly install resolved        got: '^5.0.0',
+51 silly install resolved        'humanize-string': '^1.0.0',
+51 silly install resolved        inquirer: '^0.11.0',
+51 silly install resolved        insight: '^0.7.0',
+51 silly install resolved        lodash: '^3.2.0',
+51 silly install resolved        meow: '^3.0.0',
+51 silly install resolved        'npm-keyword': '^4.1.0',
+51 silly install resolved        opn: '^3.0.2',
+51 silly install resolved        'package-json': '^2.1.0',
+51 silly install resolved        'parse-help': '^0.1.1',
+51 silly install resolved        'read-pkg-up': '^1.0.1',
+51 silly install resolved        repeating: '^2.0.0',
+51 silly install resolved        'root-check': '^1.0.0',
+51 silly install resolved        'sort-on': '^1.0.0',
+51 silly install resolved        'string-length': '^1.0.0',
+51 silly install resolved        tabtab: '^1.3.0',
+51 silly install resolved        titleize: '^1.0.0',
+51 silly install resolved        'update-notifier': '^0.6.0',
+51 silly install resolved        'user-home': '^2.0.0',
+51 silly install resolved        'yeoman-character': '^1.0.0',
+51 silly install resolved        'yeoman-doctor': '^2.0.0',
+51 silly install resolved        'yeoman-environment': '^1.6.1',
+51 silly install resolved        yosay: '^1.0.0' },
+51 silly install resolved     devDependencies:
+51 silly install resolved      { gulp: '^3.6.0',
+51 silly install resolved        'gulp-coveralls': '^0.1.0',
+51 silly install resolved        'gulp-eslint': '^2.0.0',
+51 silly install resolved        'gulp-exclude-gitignore': '^1.0.0',
+51 silly install resolved        'gulp-istanbul': '^0.10.4',
+51 silly install resolved        'gulp-mocha': '^2.0.0',
+51 silly install resolved        'gulp-nsp': '^2.1.0',
+51 silly install resolved        'gulp-plumber': '^1.0.0',
+51 silly install resolved        mocha: '^2.1.0',
+51 silly install resolved        mockery: '^1.4.0',
+51 silly install resolved        nock: '^8.0.0',
+51 silly install resolved        nsp: '^2.2.0',
+51 silly install resolved        proxyquire: '^1.0.1',
+51 silly install resolved        'registry-url': '^3.0.0',
+51 silly install resolved        sinon: '^1.12.1' },
+51 silly install resolved     tabtab: { yo: [Object] },
+51 silly install resolved     gitHead: 'b7a2c96056f4962e9635527547fd97cfa0c0168f',
+51 silly install resolved     bugs: { url: 'https://github.com/yeoman/yo/issues' },
+51 silly install resolved     _id: 'yo@1.8.1',
+51 silly install resolved     _shasum: 'f215024563f5ba0fe339fe4478f5f442fff48b74',
+51 silly install resolved     _from: 'yo@latest',
+51 silly install resolved     _npmVersion: '3.8.6',
+51 silly install resolved     _nodeVersion: '5.11.1',
+51 silly install resolved     _npmUser: { name: 'sboudrias', email: 'admin@simonboudrias.com' },
+51 silly install resolved     dist:
+51 silly install resolved      { shasum: 'f215024563f5ba0fe339fe4478f5f442fff48b74',
+51 silly install resolved        tarball: 'https://registry.npmjs.org/yo/-/yo-1.8.1.tgz' },
+51 silly install resolved     maintainers:
+51 silly install resolved      [ [Object],
+51 silly install resolved        [Object],
+51 silly install resolved        [Object],
+51 silly install resolved        [Object],
+51 silly install resolved        [Object],
+51 silly install resolved        [Object],
+51 silly install resolved        [Object] ],
+51 silly install resolved     _npmOperationalInternal:
+51 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+51 silly install resolved        tmp: 'tmp/yo-1.8.1.tgz_1462774431713_0.081624188227579' },
+51 silly install resolved     directories: {},
+51 silly install resolved     _resolved: 'https://registry.npmjs.org/yo/-/yo-1.8.1.tgz' } ]
+52 info install yo@1.8.1 into /usr/lib
+53 info installOne yo@1.8.1
+54 verbose installOne of yo to /usr/lib not in flight; installing
+55 verbose correctMkdir /home/pgrimaud/.npm/_locks correctMkdir not in flight; initializing
+56 verbose lock using /home/pgrimaud/.npm/_locks/yo-9e36c1315f2917c0.lock for /usr/lib/node_modules/yo
+57 silly install write writing yo 1.8.1 to /usr/lib/node_modules/yo
+58 verbose unbuild lib/node_modules/yo
+59 info preuninstall yo@1.7.0
+60 info uninstall yo@1.7.0
+61 verbose unbuild rmStuff yo@1.7.0 from /usr/lib/node_modules
+62 silly gentlyRm /usr/bin/yo is being gently removed
+63 silly gentlyRm verifying /usr is an npm working directory
+64 silly gentlyRm containing path /usr is under npm's control, in /usr
+65 silly gentlyRm deletion target /usr/bin/yo is under /usr
+66 verbose gentlyRm vacuuming from /usr/bin/yo up to /usr
+67 silly vacuum-fs removing /usr/bin/yo
+68 verbose unlock done using /home/pgrimaud/.npm/_locks/yo-9e36c1315f2917c0.lock for /usr/lib/node_modules/yo
+69 verbose stack Error: EACCES: permission denied, unlink '/usr/bin/yo'
+69 verbose stack     at Error (native)
+70 verbose cwd /home/pgrimaud/workspace/pascalgrimaud/test
+71 error Linux 4.4.0-21-generic
+72 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "yo"
+73 error node v4.4.3
+74 error npm  v2.15.1
+75 error path /usr/bin/yo
+76 error code EACCES
+77 error errno -13
+78 error syscall unlink
+79 error Error: EACCES: permission denied, unlink '/usr/bin/yo'
+79 error     at Error (native)
+79 error  { [Error: EACCES: permission denied, unlink '/usr/bin/yo']
+79 error   errno: -13,
+79 error   code: 'EACCES',
+79 error   syscall: 'unlink',
+79 error   path: '/usr/bin/yo' }
+80 error Please try running this command again as root/Administrator.
+81 verbose exit [ -13, true ]
+82 verbose unbuild lib/node_modules/yo
+83 info preuninstall yo@1.7.0
+84 info uninstall yo@1.7.0
+85 verbose unbuild rmStuff yo@1.7.0 from /usr/lib/node_modules
+86 silly gentlyRm /usr/bin/yo is being gently removed
+87 silly gentlyRm verifying /usr is an npm working directory
+88 silly gentlyRm containing path /usr is under npm's control, in /usr
+89 silly gentlyRm deletion target /usr/bin/yo is under /usr
+90 verbose gentlyRm vacuuming from /usr/bin/yo up to /usr
+91 silly vacuum-fs removing /usr/bin/yo
+92 error error rolling back Error: EACCES: permission denied, unlink '/usr/bin/yo'
+92 error error rolling back     at Error (native)
+92 error error rolling back  { [Error: EACCES: permission denied, unlink '/usr/bin/yo']
+92 error error rolling back   errno: -13,
+92 error error rolling back   code: 'EACCES',
+92 error error rolling back   syscall: 'unlink',
+92 error error rolling back   path: '/usr/bin/yo' }
