@@ -6,14 +6,14 @@ launchDockerPs() {
 
     docker ps -a
 
-    while [ "$retryCount" -gt "$maxRetry" ]; do
-        echo "[$(date)] Application not reachable yet. Sleep and retry - retryCount =" $retryCount "/" $maxRetry
+    while [ "$retryCount" -lt "$maxRetry" ]; do
+        echo "[$(date)] wait... =" $retryCount "/" $maxRetry
         retryCount=$((retryCount+1))
         sleep 30
 
         docker ps -a
+        docker logs app-mysql
     done
 }
-
 
 launchDockerPs
