@@ -23,7 +23,7 @@ script:
   - docker-compose version
   - docker build -t tester .
   - docker images
-  - sh run.sj
+  - sh run.sh
   - sh test.sh
   - docker ps -aq
   - docker logs app-mysql
