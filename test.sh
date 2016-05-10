@@ -9,10 +9,9 @@ launchDockerPs() {
     while [ "$retryCount" -lt "$maxRetry" ]; do
         echo "[$(date)] wait... =" $retryCount "/" $maxRetry
         retryCount=$((retryCount+1))
-        sleep 30
+        sleep 60
 
         docker ps -a
-        docker logs app-mysql
     done
 }
 
