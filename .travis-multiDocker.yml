@@ -1,0 +1,31 @@
+os:
+  - linux
+services:
+  - docker
+language: node_js
+node_js:
+  - "4.4.4"
+jdk:
+  - oraclejdk8
+install:
+  - npm install -g npm
+  - npm install -g yo bower gulp-cli
+script:
+  - java -version
+  - git --version
+  - mvn -v
+  - node -v
+  - npm -v
+  - bower -v
+  - yo --version
+  - gulp -v
+  - docker version
+  - docker-compose version
+  - docker build -t tester .
+  - docker images
+  - sh run.sh
+  - sh test.sh
+  - docker ps -aq
+  - docker logs app-mysql
+  - docker logs app-cassandra
+  - docker logs app-mongodb
