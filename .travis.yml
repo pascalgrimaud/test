@@ -8,9 +8,9 @@ node_js:
 jdk:
   - oraclejdk8
 install:
-  # - curl -L https://github.com/jhipster/jhipster-travis-build/archive/master.zip
-  # - unzip jhipster-travis-build-master.zip
-  # - ls -al jhipster-travis-build/
-  - ./downloadFromGithub.sh
+  - wget https://github.com/jhipster/jhipster-travis-build/archive/master.zip
+  - unzip jhipster-travis-build-master.zip
+  - ls -al jhipster-travis-build-master/
+  # - ./downloadFromGithub.sh
 script:
   - echo "script"
