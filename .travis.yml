@@ -11,9 +11,7 @@ install:
   - git clone https://github.com/jhipster/jhipster-travis-build.git
   - ls -al
   - wget https://github.com/jhipster/jhipster-travis-build/archive/master.zip
-  - ls -al
-  - unzip master.zip
+  - unzip master.zip > /dev/null
   - ls -al jhipster-travis-build-master/
-  # - ./downloadFromGithub.sh
 script:
   - echo "script"
