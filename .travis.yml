@@ -11,8 +11,6 @@ install:
   # - curl -L https://github.com/jhipster/jhipster-travis-build/archive/master.zip
   # - unzip jhipster-travis-build-master.zip
   # - ls -al jhipster-travis-build/
-  - curl -L https://github.com/pascalgrimaud/linuxmint/archive/master.zip
-  - unzip linuxmint-master.zip
-  - ls -al linuxmint-master/
+  - ./downloadFromGithub.sh
 script:
   - echo "script"
