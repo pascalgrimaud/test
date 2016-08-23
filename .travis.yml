@@ -8,10 +8,7 @@ node_js:
 jdk:
   - oraclejdk8
 install:
-  - git clone https://github.com/jhipster/jhipster-travis-build.git
-  - ls -al
-  - wget https://github.com/jhipster/jhipster-travis-build/archive/master.zip
-  - unzip master.zip > /dev/null
-  - ls -al jhipster-travis-build-master/
+  - docker version
+  - docker-compose version
 script:
-  - echo "script"
+  - echo "hello"
