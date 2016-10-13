@@ -4,11 +4,15 @@ services:
   - docker
 language: node_js
 node_js:
-  - "4.4.4"
+  - "4.6.0"
 jdk:
   - oraclejdk8
 install:
   - docker version
   - docker-compose version
+  - git clone https://github.com/yarnpkg/yarn.git
+  - cd yarn
+  - npm install -g .
+  - yarn --version
 script:
   - echo "hello"
