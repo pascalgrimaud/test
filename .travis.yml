@@ -10,9 +10,11 @@ jdk:
 install:
   - docker version
   - docker-compose version
+  - npm install -g yarn
+  - yarn --version
   - git clone https://github.com/yarnpkg/yarn.git
   - cd yarn
-  - npm install -g .
+  - npm link
   - yarn --version
 script:
   - echo "hello"
