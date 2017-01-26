@@ -4,19 +4,11 @@ services:
   - docker
 language: node_js
 node_js:
-  - "4.6.0"
+  - "6.9.4"
 jdk:
   - oraclejdk8
 install:
   - docker version
   - docker-compose version
-  - npm install -g yarn
-  - yarn global add yo bower gulp-cli
-  - yo --version
-  - bower -v
-  - gulp -v
 script:
-  - git clone https://github.com/pascalgrimaud/generator-jhipster.git
-  - cd generator-jhipster
-  - yarn install
-  - yarn link
+  - echo "HELLO WORLD"
