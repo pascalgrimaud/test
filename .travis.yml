@@ -12,3 +12,5 @@ install:
   - docker-compose version
 script:
   - echo "HELLO WORLD"
+  - docker pull openjdk:8-jre-alpine
+  - docker run --rm --name registry openjdk:8-jre-alpine java -version
